@@ -6,17 +6,21 @@
   width: 100%;
 }
 .model__section {
-  padding: 15px;
-  width: 24%;
+  padding: 11px;
+  width: calc(24% + 10px);
+}
+.model__section:nth-child(even) > .model__section__image {
+  margin-top: 10px;
 }
 .model__section:nth-child(odd) > .model__section__description > .model__section__description__titles {
-  margin-top: 25px;
+  margin-top: 17px;
+  margin-bottom: 3px;
 }
 .model__section__image {
   position: relative;
 }
 .model__section__image__model img {
-  width: 101%;
+  width: 100%;
 }
 .model__section__image__heart {
   display: flex;
@@ -41,15 +45,16 @@
   align-items: center;
   flex-direction: column;
   height: 200px;
-  letter-spacing: 1.3px;
 }
 .model__section__description__titles {
   text-align: center;
   height: 80px;
+  margin-top: 15px;
 }
 .model__section__description__titles--title {
   font-size: 21px;
-  margin-bottom: 10px;
+  letter-spacing: -1px;
+  margin-bottom: 13px;
 }
 .model__section__description__titles--subtitle {
   font-size: 16px;
@@ -98,7 +103,7 @@
 }
 @media (max-width: 700px) {
   .model__section__description--link {
-    margin-top: 80px;
+    margin-top: 70px;
   }
 }
 @media (max-width: 500px) {
@@ -108,11 +113,15 @@
   }
   .model__section {
     margin-bottom: 10px;
+    margin-top: 2px;
     width: 92%;
   }
   .model__section:nth-child(2) {
     display: flex;
     flex-direction: column-reverse;
+  }
+  .model__section:nth-child(3) {
+    margin-top: 6px;
   }
   .model__section__image {
     position: relative;
@@ -122,17 +131,26 @@
   }
   .model__section__description {
     justify-content: flex-start;
+    letter-spacing: 1.3px;
   }
   .model__section__description__titles {
     min-height: 140px;
+    margin-bottom: 0 !important;
   }
   .model__section__description__titles--title {
     overflow-wrap: break-word;
     max-width: 250px;
-    margin-top: 38px;
+    margin-top: 36px;
+    line-height: 26px;
+    letter-spacing: 1.3px !important;
   }
   .model__section__description--link {
-    margin-top: 20px;
+    margin-top: 0px;
+  }
+}
+@media (max-width: 250px) {
+  .model__section__description--link {
+    margin-top: 45px;
   }
 }
 @keyframes content-margin {
